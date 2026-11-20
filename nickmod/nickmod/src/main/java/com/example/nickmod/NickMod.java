@@ -59,7 +59,7 @@ public class NickMod implements ModInitializer {
 
     /** Push the updated name to everyone's tab list. */
     private static void refresh(ServerPlayerEntity player) {
-        player.getServer().getPlayerManager().sendToAll(
+        player.getEntityWorld().getServer().getPlayerManager().sendToAll(
             new PlayerListS2CPacket(PlayerListS2CPacket.Action.UPDATE_DISPLAY_NAME, player));
     }
 }
