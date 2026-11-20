@@ -11,7 +11,7 @@ public final class OpUtil {
      * If Mojang's permission API shifts again, only edit this method.
      */
     public static boolean isOp(ServerPlayerEntity player) {
-        return player.getServer().getPlayerManager().isOperator(player.getPlayerConfigEntry());
+       return player.getEntityWorld().getServer().getPlayerManager().isOperator(player.getPlayerConfigEntry());
     }
 
     /** Console / command blocks / RCON (non-players) count as allowed. */
